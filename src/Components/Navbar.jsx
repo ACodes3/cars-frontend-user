@@ -14,6 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
+import { Link } from "react-router-dom";
 import CarLogo from "../Images/car-rental.png";
 
 const drawerWidth = 240;
@@ -42,7 +43,12 @@ const Navbar = (props) => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <Link
+                to={`/${item.toLowerCase()}`}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <ListItemText primary={item} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -88,7 +94,12 @@ const Navbar = (props) => {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: "#fff" }}>
-                {item}
+                <Link
+                  to={`/${item.toLowerCase()}`}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {item}
+                </Link>
               </Button>
             ))}
           </Box>
