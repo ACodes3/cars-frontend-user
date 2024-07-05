@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <Box bgcolor="primary.main" color="primary.contrastText" p={4} my={6}>
+    <Box bgcolor="primary.main" color="primary.contrastText" p={4} marginTop={6}>
       <Box style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
         <Typography variant="h6" gutterBottom>
           Car Rental
