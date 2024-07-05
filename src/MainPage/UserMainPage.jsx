@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import AboutPage from "../Pages/AboutPage";
 import ContactPage from "../Pages/ContactPage";
+import DocumentationPage from "../Pages/DocumentationPage";
 import HomePage from "../Pages/HomePage";
 
 const UserMainPage = () => {
@@ -19,6 +20,9 @@ const UserMainPage = () => {
     case "contact":
       contentComponent = <ContactPage />;
       break;
+      case "documentation":
+        contentComponent = <DocumentationPage />;
+        break;
     default:
       contentComponent = null;
   }

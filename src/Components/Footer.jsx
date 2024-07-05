@@ -10,11 +10,11 @@ const Footer = () => {
         </Typography>
         <Box style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
           <Typography variant="body2" color="white" gutterBottom>
-            <Link href="#" style={{ color: "white" }}>
+            <Link href="/home" style={{ color: "white" }}>
               Home
             </Link>
             {" | "}
-            <Link href="#" style={{ color: "white" }}>
+            <Link href="/documentation" style={{ color: "white" }}>
               Documentation
             </Link>
           </Typography>
