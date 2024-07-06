@@ -1,3 +1,4 @@
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -91,7 +92,14 @@ const Navbar = (props) => {
           >
             Car Rental
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            sx={{ display: { xs: "none", sm: "block" } }}
+          >
             {navItems.map((item) => (
               <Button key={item} sx={{ color: "#fff" }}>
                 <Link
@@ -102,6 +110,11 @@ const Navbar = (props) => {
                 </Link>
               </Button>
             ))}
+            <Button style={{marginTop:"7px"}} sx={{ color: "#fff" }}>
+              <Link to={`/user-login`}>
+                <AccountCircleIcon sx={{ color: "white" }} />
+              </Link>
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
