@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import CarLogo from "../Images/car-rental.png";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Home", "About", "Contact", "Cars Filter"];
 
 const Navbar = (props) => {
   const { window } = props;
@@ -44,7 +44,7 @@ const Navbar = (props) => {
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <Link
-                to={`/${item.toLowerCase()}`}
+                to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 <ListItemText primary={item} />
@@ -95,7 +95,7 @@ const Navbar = (props) => {
             {navItems.map((item) => (
               <Button key={item} sx={{ color: "#fff" }}>
                 <Link
-                  to={`/${item.toLowerCase()}`}
+                  to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
                   {item}
