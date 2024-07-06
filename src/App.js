@@ -23,7 +23,7 @@ const App = () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Router>
         <Routes>
-          {/* Default Route for Admin Dashboard */}
+          {/* Default Route for User Pages */}
           <Route
             path="/:item"
             element={
@@ -32,19 +32,19 @@ const App = () => (
               </UserLayout>
             }
           />
-          {/* Route for Admin Login */}
+          {/* Route for User Login */}
           <Route path="/user-login" element={<UserLogin />} />
-          {/* Route for Admin Register */}
+          {/* Route for User Register */}
           <Route path="/user-register" element={<Register />} />
           {/* Default Redirect (if no matching route is found) */}
-          <Route path="/*" element={<Navigate replace to="/" />} />
+          <Route path="/*" element={<Navigate replace to="/home" />} />
         </Routes>
       </Router>
     </LocalizationProvider>
   </ThemeProvider>
 );
 
-// Separate layout component for Admin Dashboard
+// Separate layout component for User Dashboard
 const UserLayout = ({ children }) => (
   <Box sx={{ display: "flex", flexDirection: "column" }}>
     <Navbar />
